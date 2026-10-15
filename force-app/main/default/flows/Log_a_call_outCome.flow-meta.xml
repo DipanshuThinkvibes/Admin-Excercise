@@ -37,6 +37,9 @@
         <label>Check OutCome</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>END_ELEMENT_5</targetReference>
+        </defaultConnector>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
             <name>Is_Not_Interested</name>
@@ -49,13 +52,13 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Create_Task</targetReference>
+                <targetReference>Update_Lead_Based_on_not_Interested</targetReference>
             </connector>
             <label>Is Not Interested</label>
         </rules>
         <rules>
-            <name>Is_Interested</name>
-            <conditionLogic>and</conditionLogic>
+            <name>Is_Interested_Or_call_Back_Later</name>
+            <conditionLogic>or</conditionLogic>
             <conditions>
                 <leftValueReference>Call_Outcome</leftValueReference>
                 <operator>EqualTo</operator>
@@ -63,14 +66,6 @@
                     <elementReference>Interested</elementReference>
                 </rightValue>
             </conditions>
-            <connector>
-                <targetReference>Update_Lead_Based_on_Interested</targetReference>
-            </connector>
-            <label>Is Interested</label>
-        </rules>
-        <rules>
-            <name>Is_Call_Back_Later</name>
-            <conditionLogic>and</conditionLogic>
             <conditions>
                 <leftValueReference>Call_Outcome</leftValueReference>
                 <operator>EqualTo</operator>
@@ -79,11 +74,26 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Update_Lead_Based_on_Call_Back_Later</targetReference>
+                <targetReference>Update_Lead_Based_on_Interested</targetReference>
             </connector>
-            <label>Is Call Back Later</label>
+            <label>Is Interested Or call  Back Later</label>
         </rules>
     </decisions>
+    <ends>
+        <name>END_ELEMENT_5</name>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+    </ends>
+    <ends>
+        <name>END_ELEMENT_7</name>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+    </ends>
+    <ends>
+        <name>END_ELEMENT_8</name>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+    </ends>
     <environments>Default</environments>
     <interviewLabel>Log a call outCome {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Log a call outCome</label>
@@ -112,7 +122,7 @@
         <locationX>0</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>Update_Lead_Based_on_not_Interested</targetReference>
+            <targetReference>Check_OutCome</targetReference>
         </connector>
         <inputAssignments>
             <field>OwnerId</field>
@@ -129,7 +139,7 @@
         <inputAssignments>
             <field>Status</field>
             <value>
-                <stringValue>Not Started</stringValue>
+                <stringValue>Completed</stringValue>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -139,7 +149,7 @@
             </value>
         </inputAssignments>
         <inputAssignments>
-            <field>WhatId</field>
+            <field>WhoId</field>
             <value>
                 <elementReference>recordId</elementReference>
             </value>
@@ -148,31 +158,13 @@
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordCreates>
     <recordUpdates>
-        <name>Update_Lead_Based_on_Call_Back_Later</name>
-        <label>Update Lead Based on Call Back Later</label>
-        <locationX>0</locationX>
-        <locationY>0</locationY>
-        <filterLogic>and</filterLogic>
-        <filters>
-            <field>Id</field>
-            <operator>EqualTo</operator>
-            <value>
-                <elementReference>recordId</elementReference>
-            </value>
-        </filters>
-        <inputAssignments>
-            <field>Status</field>
-            <value>
-                <stringValue>Working - Contacted</stringValue>
-            </value>
-        </inputAssignments>
-        <object>Lead</object>
-    </recordUpdates>
-    <recordUpdates>
         <name>Update_Lead_Based_on_Interested</name>
         <label>Update Lead Based on Interested</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
+        <connector>
+            <targetReference>END_ELEMENT_7</targetReference>
+        </connector>
         <filterLogic>and</filterLogic>
         <filters>
             <field>Id</field>
@@ -194,6 +186,9 @@
         <label>Update Lead Based on not Interested</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
+        <connector>
+            <targetReference>END_ELEMENT_8</targetReference>
+        </connector>
         <filterLogic>and</filterLogic>
         <filters>
             <field>Id</field>
@@ -219,7 +214,7 @@
         <allowFinish>true</allowFinish>
         <allowPause>true</allowPause>
         <connector>
-            <targetReference>Check_OutCome</targetReference>
+            <targetReference>Create_Task</targetReference>
         </connector>
         <fields>
             <name>Call_Outcome</name>
