@@ -2,6 +2,11 @@
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <apiVersion>67.0</apiVersion>
     <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <ends>
+        <name>END_ELEMENT_2</name>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+    </ends>
     <environments>Default</environments>
     <interviewLabel>Update Opportunity based on task {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Update Opportunity based on task</label>
@@ -50,6 +55,9 @@
         <label>Update Related Opportunity to Task</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
+        <connector>
+            <targetReference>END_ELEMENT_2</targetReference>
+        </connector>
         <filterLogic>and</filterLogic>
         <filters>
             <field>Id</field>
