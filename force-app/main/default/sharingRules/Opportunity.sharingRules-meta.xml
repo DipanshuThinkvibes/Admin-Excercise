@@ -6,6 +6,11 @@
         <label>APAC Opportunity Sharing</label>
         <sharedTo>
             <role>Sales_Director_APAC</role>
+        <fullName>Opportunity_Sharing_Rule</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Opportunity Sharing Rule</label>
+        <sharedTo>
+            <role>Sales_Director_Global</role>
         </sharedTo>
         <sharedFrom>
             <role>Sales_Director_APAC</role>
