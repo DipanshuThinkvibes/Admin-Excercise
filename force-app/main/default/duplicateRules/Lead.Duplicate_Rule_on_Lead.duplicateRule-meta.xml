@@ -14,5 +14,5 @@
     <masterLabel>Duplicate Rule on Lead</masterLabel>
     <operationsOnInsert>Alert</operationsOnInsert>
     <securityOption>EnforceSharingRules</securityOption>
-    <sortOrder>3</sortOrder>
+    <sortOrder>2</sortOrder>
 </DuplicateRule>

@@ -166,16 +166,16 @@
             <field>Contract</field>
             <table>Opportunity</table>
         </columns>
-        <columns>
+        <!-- <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Employee__c</field>
             <table>Opportunity</table>
-        </columns>
-        <columns>
+        </columns> -->
+        <!-- <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Opportunity__c</field>
             <table>Opportunity</table>
-        </columns>
+        </columns> -->
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Discount_Approved__c</field>

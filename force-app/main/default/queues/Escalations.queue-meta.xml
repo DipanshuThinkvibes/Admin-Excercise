@@ -5,9 +5,9 @@
     <name>Escalations</name>
     <queueMembers>
         <users>
-            <user>dipanshu.gupta@thinkvibes.com</user>
+            <user>dipanshu.gupta.gupta@thinkvibes.com</user>
             <user>kim.dipanshu.gupta@thinkvibes.com</user>
-            <user>test-qctwwzmlnjvg@example.com</user>
+            <!-- <user>test-qctwwzmlnjvg@example.com</user> -->
         </users>
     </queueMembers>
     <queueSobject>

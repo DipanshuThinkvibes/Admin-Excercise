@@ -130,17 +130,17 @@
                 <identifier>RecordLeadSourceField</identifier>
             </fieldInstance>
         </itemInstances>
-        <itemInstances>
+        <!-- <itemInstances>
             <fieldInstance>
                 <fieldInstanceProperties>
                     <name>uiBehavior</name>
                     <value>none</value>
                 </fieldInstanceProperties>
-                <fieldItem>Record.Employee__c</fieldItem>
+                 <fieldItem>Record.Employee__c</fieldItem> 
                 <identifier>RecordEmployee_cField</identifier>
-            </fieldInstance>
-        </itemInstances>
-        <itemInstances>
+            </fieldInstance> 
+        </itemInstances> -->
+        <!-- <itemInstances>
             <fieldInstance>
                 <fieldInstanceProperties>
                     <name>uiBehavior</name>
@@ -149,7 +149,7 @@
                 <fieldItem>Record.Opportunity__c</fieldItem>
                 <identifier>RecordOpportunity_cField</identifier>
             </fieldInstance>
-        </itemInstances>
+        </itemInstances> -->
         <itemInstances>
             <fieldInstance>
                 <fieldInstanceProperties>

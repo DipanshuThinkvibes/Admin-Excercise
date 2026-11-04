@@ -3,18 +3,22 @@
     <caseAssignRuleCommunity>false</caseAssignRuleCommunity>
     <caseAutoProcUser>false</caseAutoProcUser>
     <caseDescAttachments>false</caseDescAttachments>
+
     <caseFeedItemSettings>
         <characterLimit>400</characterLimit>
         <displayFormat>Default</displayFormat>
         <feedItemType>EmailMessageEvent</feedItemType>
     </caseFeedItemSettings>
+
     <caseFeedReadUnreadLtng>false</caseFeedReadUnreadLtng>
     <caseMergeInLightning>false</caseMergeInLightning>
     <closeCaseThroughStatusChange>false</closeCaseThroughStatusChange>
     <defaultCaseFeedLayoutOn>true</defaultCaseFeedLayoutOn>
-    <defaultCaseOwner>test-qctwwzmlnjvg@example.com</defaultCaseOwner>
+
+    <defaultCaseOwner>dipanshu.gupta.gupta@thinkvibes.com</defaultCaseOwner>
     <defaultCaseOwnerType>User</defaultCaseOwnerType>
-    <defaultCaseUser>test-qctwwzmlnjvg@example.com</defaultCaseUser>
+    <defaultCaseUser>dipanshu.gupta.gupta@thinkvibes.com</defaultCaseUser>
+
     <emailToCase>
         <enableE2CAttachmentAsFile>false</enableE2CAttachmentAsFile>
         <enableE2CDeduplicateAttachments>false</enableE2CDeduplicateAttachments>
@@ -32,21 +36,23 @@
         <overEmailLimitAction>Bounce</overEmailLimitAction>
         <preQuoteSignature>false</preQuoteSignature>
         <replyWithNewContentOnly>false</replyWithNewContentOnly>
+
         <routingAddresses>
             <addressType>EmailToCase</addressType>
             <caseOrigin>Web</caseOrigin>
             <casePriority>Medium</casePriority>
             <createTask>false</createTask>
             <emailAddress>dipanshu.gupta@thinkvibes.com</emailAddress>
-            <emailServicesAddress>dipanshu.gupta@7zwkz51aot7bhy7j9mm29jtct5deg20j6dywprpfiwtvn3wwt.aw-hrtovmah.can8s.case.sandbox.salesforce.com</emailServicesAddress>
+            <!-- <emailServicesAddress>dipanshu.gupta@7zwkz51aot7bhy7j9mm29jtct5deg20j6dywprpfiwtvn3wwt.aw-hrtovmah.can8s.case.sandbox.salesforce.com</emailServicesAddress> -->
             <isPermsetControlled>false</isPermsetControlled>
-            <isVerified>true</isVerified>
             <routingName>dipanshu.gupta@thinkvibes.com</routingName>
             <saveEmailHeaders>false</saveEmailHeaders>
         </routingAddresses>
+
         <unauthorizedSenderAction>Discard</unauthorizedSenderAction>
         <useEmailHeadersForThreading>true</useEmailHeadersForThreading>
     </emailToCase>
+
     <enableCaseFeed>true</enableCaseFeed>
     <enableCollapseEmailThread>true</enableCollapseEmailThread>
     <enableDraftEmails>false</enableDraftEmails>
@@ -74,6 +80,7 @@
     <useSystemEmailAddress>true</useSystemEmailAddress>
     <useSystemUserAsDefaultCaseUser>false</useSystemUserAsDefaultCaseUser>
     <visibleInCssCheckbox>false</visibleInCssCheckbox>
+
     <webToCase>
         <caseOrigin>Web</caseOrigin>
         <enableWebToCase>true</enableWebToCase>

@@ -10,13 +10,13 @@
                 <operation>equals</operation>
                 <value>High</value>
             </criteriaItems>
-            <criteriaItems>
+            <!-- <criteriaItems>
                 <field>Case.BusinessHoursId</field>
                 <operation>equals</operation>
                 <value>GoC Support Hours</value>
-            </criteriaItems>
+            </criteriaItems> -->
             <escalationAction>
-                <assignedTo>test-qctwwzmlnjvg@example.com</assignedTo>
+                <assignedTo>dipanshu.gupta.gupta@thinkvibes.com</assignedTo>
                 <assignedToType>User</assignedToType>
                 <minutesToEscalation>240</minutesToEscalation>
                 <notifyCaseOwner>false</notifyCaseOwner>
